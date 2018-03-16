@@ -11,10 +11,12 @@ addComma elem = map aux2 elem
 --Crie uma função htmlListItems :: [String] -> [String], que receba uma lista de strings e retorne outra lista contendo as strings formatadas como itens de lista em HTML. Resolva este exercício COM e SEM funções anônimas (lambda).
 
 --semLAMBDA
-aux3 :: String -> String
-aux3 elem = "<LI>" ++ elem ++ "</LI>"
+aux3SLAMBDA :: String -> String
+aux3SLAMBDA elem = "<LI>" ++ elem ++ "</LI>"
 
 htmlListItems :: [String] -> [String]
-htmlListItems elem = map aux3 elem
+htmlListItems list = map aux3SLAMBDA list
 
 --comLAMBDA
+htmlListItemsLAMBDA :: [String] -> [String]
+htmlListItemsLAMBDA list = map (\list ->"<LI>" ++ list ++ "</LI>") list
