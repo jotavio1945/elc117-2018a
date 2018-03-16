@@ -28,3 +28,7 @@ aux4 x = x `elem` "bcdfghjklmnpqrstvwxyz"
 
 semVogais :: String -> String
 semVogais txt = filter aux4 txt
+
+--comLAMBDA
+semVogaisL :: String->String
+semVogaisL txt = filter(\txt->txt `elem`"bcdfghjklmnpqrstvwxyz") txt
