@@ -20,3 +20,11 @@ htmlListItems list = map aux3SLAMBDA list
 --comLAMBDA
 htmlListItemsLAMBDA :: [String] -> [String]
 htmlListItemsLAMBDA list = map (\list ->"<LI>" ++ list ++ "</LI>") list
+
+--Defina uma função que receba uma string e produza outra retirando as vogais, conforme os exemplos abaixo. Resolva este exercício COM e SEM funções anônimas (lambda).
+--semLAMBDA
+aux4 :: Char -> Bool
+aux4 x = x `elem` "bcdfghjklmnpqrstvwxyz"
+
+semVogais :: String -> String
+semVogais txt = filter aux4 txt
